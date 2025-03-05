@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAR-WEB</title>
+  <link rel="website icon" type="png" href="mqueen.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wdth@85.2&display=swap" rel="stylesheet">
+
+  <style>
+    .header{
+      height: 140px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      grid-template-rows: 1fr 1fr 1fr;
+      position: relative;
+      
+      
+
+    }
+    .mc{
+      height: 110px;
+      border-radius: 15px;
+      transition: transform 1s;
+      margin-left: 50px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    .mc:hover{
+      transform: scale(1.2);
+    }
+
+    .title{
+      font-size:50px;
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: 5px;
+      font-size: 80px;
+      
+    }
+    .log{
+      margin-right: -530px;
+      height: 60px;
+      width: 120px;
+      border-radius: 10px;
+      border-width: 2px;
+      background-color: gray;
+      color: white;
+      font-weight: bold;
+      font-size: 17px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.90);
+      cursor: pointer;
+    }
+
+    .log:hover{
+      opacity: 0.8;
+      color: black;
+    }
+    .log:active{
+      background-color: rgb(99, 93, 93);
+      color: white;
+      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+
+    }
+    .sign{
+      margin-right: 70px;
+      border-radius: 10px;
+      height: 60px;
+      width: 120px;
+      border-width: 2px;
+      background-color: gray;
+      color: white;
+      font-weight: bold;
+      font-size: 17px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.90);
+      cursor: pointer;
+    }
+    .sign:hover{
+      opacity: 0.8;
+      color: black;
+    }
+    .sign:active{
+      background-color: rgb(99, 93, 93);
+      color: white;
+      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    }
+
+
+
+
+
+    .nd-line{
+      margin-top: 70px;
+      height: 140px;
+      display: flex;
+      flex-direction: row;
+      justify-content:space-around;
+      align-items: center;
+
+      grid-template-rows: 1fr 1fr 1fr;
+      position: relative;
+
+    }
+
+    .home{
+      margin-left: 350px;
+      height: 75px;
+      width: 150px;
+      border-radius: 10px;
+      border-width: 2px;
+      color: black;
+      font-size: 17px;
+      font-weight: bold;
+      background-color: azure;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.70);
+      cursor: pointer;
+
+    }
+
+    
+    .home:hover{
+      background-color: rgb(186, 218, 218);
+      color:white;
+    }
+    .home:active{
+      background-color: rgb(205, 198, 198);
+      color:black;
+      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+
+    }
+
+    .product{
+      height: 75px;
+      width: 150px;
+      border-radius: 10px;
+      border-width: 2px;
+      color: black;
+      font-size: 17px;
+      font-weight: bold;
+      background-color: azure;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.70);
+      cursor: pointer;
+    }
+
+    .product:hover{
+      background-color: rgb(186, 218, 218);
+      color:white;
+    }
+    .product:active{
+      background-color: rgb(205, 198, 198);
+      color:black;
+      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+
+    }
+
+    .about{
+      margin-right: 350px;
+      height: 75px;
+      width: 150px;
+      border-radius: 10px;
+      border-width: 2px;
+      color: black;
+      font-size: 17px;
+      font-weight: bold;
+      background-color: azure;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.70);
+      cursor: pointer;
+    }
+
+    .about:hover{
+      background-color: rgb(186, 218, 218);
+      color:white;
+    }
+    .about:active{
+      background-color: rgb(205, 198, 198);
+      color:black;
+      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+
+    }
+
+    .rd-line{
+      display: flex;
+      align-items: center;
+      margin-left: 350px;
+      background-color: lightgrey;
+      width: 1500px;
+      height: 290px;
+      border: solid;
+      border-width: 3px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 3px 4px 15px 5px;
+    }
+
+    .th-line{
+      display: flex;
+      flex-direction: row;
+      
+      position: relative;
+      
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      
+
+    }
+    .box{
+      height: 400px;
+      width: 470px;
+      border: solid;
+      background-color: lightgray;
+      border-radius: 10px;
+      box-shadow: 3px 4px 15px 5px;
+      
+
+    }
+    .porsche{
+      height: 400px;
+      width: 470px;
+    }
+    .phone{
+      height: 400px;
+      width: 470px;
+    }
+    .shoes{
+      height: 400px;
+      width: 470px;
+    }
+
+
+
+
+  </style>
+</head>
+
+
+<body style="background-color: #88BDBC ;">
+  <div class="header">
+    <img class="mc" src="mqueen.jpg" >
+    <P class="title">CARS-WEB</P>
+    <button class="log">LOGIN</button>
+    <button class="sign">SIGNUP</button>
+    
+  </div>
+  
+
+  <div class="nd-line">
+    
+    <a  href="resume_manio_nuqui.html" target="blank"><button class="home">HOME</button></a>
+    <button class="product">PRODUCT</button>
+    <button class="about">ABOUT US</button> 
+
+  </div>
+
+  
+
+  <div class="rd-line">
+
+
+  </div>
+
+  
+
+
+  <div class="th-line">
+
+    <div class="box">
+      <img  class="porsche" src="porsche.jpg">
+    </div>
+    <div class="box">
+      <img class="phone" src="phone.jpg">
+    </div>
+    <div class="box">
+      <img class="shoes" src="Nike Air Jordan 1 Midnight Stars.jpg">
+    </div>
+     
+
+  </div>
+
+
+
+
+  
+  
+</body>
+</html>
