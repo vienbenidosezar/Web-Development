@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      position: absolute;
+      left: 50px;
+      bottom: 0;
+      top: 0;
+
+      border: 1px solid;
+      width: 100px;
+    }
+
+    nav .center_div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    nav .bottom_div {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+
+    }
+
+    nav button {
+      padding: 5px 20px;
+      width: 100%;
+    }
+
+    main table, th, td {
+      border: 1px solid black;
+    }
+    
+    main table .product_tr{
+      height: 40px;
+    }
+
+    main table .models_tr td{
+      width: 200px;
+      text-align: center;
+    }
+
+    main table{
+      width: 100%;
+    }
+
+    main {
+      display: flex;
+      position: absolute;
+      width: 1500px;
+
+      right: 150px;
+      top: 90px;
+      bottom: 90px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="center_div">
+      <div class="cars_div">
+        <a href="product_cars.html">
+          <button class="cars_bt">Cars</button>
+        </a>
+      </div>
+  
+      <div class="cellphones_div">
+        <a href="product_cellphones.html">
+          <button class="cellp_bt">Cellphones</button>
+        </a>
+      </div>
+  
+      <div class="shoes_div">
+        <a href="product_shoes.html">
+          <button class="shoes_bt">Shoes</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="bottom_div">
+      <a href="index.html">
+        <button>Back</button>
+      </a>
+      
+    </div>
+  </nav>
+  
+  <main>
+    <table>
+      <tr class="product_tr">
+        <th>Audi</th>
+        <th>BMW</th>
+        <th>Ferrari</th>
+        
+      </tr>
+
+      <tr class="models_tr">
+        <td>A3 Sedan</td>
+        <td>BMW XM</td>
+        <td>1996 Ferrari F50</td>
+
+      </tr>
+
+      <tr class="models_tr">
+        <td>A3 Cabroplet</td>
+        <td>BMW iX</td>
+        <td>2014 Ferrari LaFerrari</td>
+
+      </tr>
+
+      <tr class="models_tr">
+        <td>Audi RS3</td>
+        <td>BMW i7</td>
+        <td>2020 Ferrari Portofino</td>
+      </tr>
+    </table>
+  </main>
+</body>
+</html>
