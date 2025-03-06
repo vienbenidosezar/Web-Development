@@ -4,8 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="website icon" type="png" href="thumbnail1.jpg">
+  <link rel="website icon" type="png" href="logo.svg">
   <style>
+
+    p{
+      margin: 0;
+    }
     nav {
       display: flex;
       flex-direction: column;
@@ -18,7 +22,8 @@
       top: 0;
 
       
-      width: 100px;
+      width: 150px;
+      border: 1px solid;
     }
 
     nav .center_div {
@@ -26,6 +31,8 @@
       flex-direction: column;
       justify-content: center;
       gap: 10px;
+
+      
     }
 
     nav .bottom_div {
@@ -41,54 +48,124 @@
     nav button {
       padding: 7px 20px;
       padding-right: 15px;
-      width: 150px;
+      width: 100%;
       font-size: 17px;
       margin-bottom: 15px;
       border-radius: 5px;
-      box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.40);
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.30);
      
     }
 
     nav button:hover{
     background-color: rgb(199, 190, 190);
      
-   }
-   nav button:active{
-     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-   
-   
-    
-  }
+    }
+    nav button:active{
+      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+
+    }
 
     main table, th, td {
       border: 1px solid black;
     }
+
+    main table img{
+      width: 200px;
+      border: 1px solid;
+    }
     
     main table .product_tr{
       height: 40px;
+      
     }
 
     main table .models_tr td{
-      width: 200px;
-      text-align: center;
+      width: 500px;
     }
-    main table .models_tr td .img{
-      width: 200px;
-      text-align: center;
-    }
+
 
     main table{
       width: 100%;
+      
+
     }
 
     main {
       display: flex;
-      position: fixed;
-      width: 1500px;
+      justify-content: center;
 
+      position: absolute;
       right: 150px;
       top: 90px;
       bottom: 90px;
+      
+      width: 1500px;
+
+      border: 1px solid blue;
+
+    }
+
+    .main_div {
+      display: flex;
+      width: 1200px;
+
+    }
+
+    .main_description_div {
+      display: flex;
+      border: 1px solid pink;
+      justify-content: center;
+      align-content: center;
+
+      width: 400px;
+
+
+    }
+    .description_div {
+      width: 200px;
+
+      border: 1px solid orange;
+
+      position: relative;
+    }
+
+    .model_div {
+      margin-bottom: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .info_div {
+      margin-bottom: 10px;
+    }
+
+    .info_div .info_p{
+      margin-bottom: 10px;
+    }
+
+    .info_div .price_p{
+      position: absolute;
+      bottom: 35px;
+      right: 0;
+      left: 0;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .order_div {
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      justify-content: center;
+
+      border: 1px solid ;
+    }
+
+    .order_div button {
+      padding: 5px 10px;
+      margin: 0px 5px;
     }
     
   </style>
@@ -124,34 +201,222 @@
   </nav>
   
   <main>
-    <table>
-      <tr class="product_tr">
-        <th>PORSCHE</th>
-        <th>BMW</th>
-        <th>CHEVROLET</th>
-        
-      </tr>
+    <div class="main_div">
+      <table>
+        <tr class="product_tr">
+          <th>PORSCHE</th>
+          <th>BMW</th>
+          <th>CHEVROLET</th>
+          
+        </tr>
+  
+        <tr class="models_tr">
+          <td>
+            <div class="main_description_div">
+              <img src="Product-CARS/01-porsche911CarreraT.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  911 Carrera T
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">The 911 Carrera T provides even more agility, dynamism and unbridled emotions, especially on winding mountain and country roads.</p>
+                  <p class="price_p">PHP 4,350,000</p>
+                </div>
 
-      <tr class="models_tr">
-        <td>car1</td>
-        <td>car2</td>
-        <td>car2</td>
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
 
-      </tr>
 
-      <tr class="models_tr">
-        <td>car2</td>
-        <td>car2</td>
-        <td>car2</td>
+          <td>
+            <div class="main_description_div">
+              <img src="Product-CARS/01-BMWX3.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  BMW X3
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">Take the road to adventure in a 2025 BMW X3 30 xDrive with excellent cargo capacity, spacious seating, and comfortable interiors.</p>
+                  <p class="price_p">PHP 4,190,000.00</p>
+                </div>
 
-      </tr>
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
 
-      <tr class="models_tr">
-        <td>car3</td>
-        <td>car3</td>
-        <td>car3</td>
-      </tr>
-    </table>
+
+          <td>
+            <div class="main_description_div">
+              <img src="Product-CARS/01-chevroletCamaro.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  Chevrolet Camaro
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">The Chevrolet Camaro is a mid-size American automobile manufactured by Chevrolet, classified as a pony car.</p>
+
+                  <p class="price_p">PHP 4,266,888 </p>
+                </div>
+
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+         </td>
+  
+        </tr>
+  
+        <tr class="models_tr">
+          <td>
+            <div class="main_description_div">
+              <img src="Product-CARS/02-porsche911GT3.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  911 Carrera T
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">The 911 Carrera T provides even more agility, dynamism and unbridled emotions, especially on winding mountain and country roads.</p>
+                  <p class="price_p">PHP 4,350,000</p>
+                </div>
+
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
+
+
+                    <td>
+            <div class="main_description_div">
+              <img src="Product-CARS/02-BMWM4Coupe.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  911 Carrera T
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">The 911 Carrera T provides even more agility, dynamism and unbridled emotions, especially on winding mountain and country roads.</p>
+                  <p class="price_p">PHP 4,350,000</p>
+                </div>
+
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
+
+          
+          <td>
+            <div class="main_description_div">
+              <img src="Product-CARS/02-chevroletTrax.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  911 Carrera T
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">The 911 Carrera T provides even more agility, dynamism and unbridled emotions, especially on winding mountain and country roads.</p>
+                  <p class="price_p">PHP 4,350,000</p>
+                </div>
+
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
+  
+        </tr>
+  
+        <tr class="models_tr">
+          <td>
+            <div class="main_description_div">
+              <img src="Product-CARS/03-porscheCarrerGTS.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  911 Carrera T
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">The 911 Carrera T provides even more agility, dynamism and unbridled emotions, especially on winding mountain and country roads.</p>
+                  <p class="price_p">PHP 4,350,000</p>
+                </div>
+
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
+
+
+          <td>
+            <div class="main_description_div">
+              <img src="Product-CARS/03-BMWi4.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  911 Carrera T
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">The 911 Carrera T provides even more agility, dynamism and unbridled emotions, especially on winding mountain and country roads.</p>
+                  <p class="price_p">PHP 4,350,000</p>
+                </div>
+
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
+
+
+          <td>
+            <div class="main_description_div">
+              <img src="Product-CARS/03-chevroletTracker.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  911 Carrera T
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">The 911 Carrera T provides even more agility, dynamism and unbridled emotions, especially on winding mountain and country roads.</p>
+                  <p class="price_p">PHP 4,350,000</p>
+                </div>
+
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
+
+        </tr>
+      </table>
+
+    </div>
   </main>
 </body>
 </html>

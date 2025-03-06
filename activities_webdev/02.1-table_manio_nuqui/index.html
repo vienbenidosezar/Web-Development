@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="website icon" type="png" href="thumbnail1.jpg">
+  <link rel="website icon" type="png" href="thumbnail1.svg">
   
 
 
@@ -45,11 +45,8 @@
     }
     .right_div button:active{
       box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-    
-    
-     
+ 
    }
-
 
     .right_div{
       display: flex;
@@ -138,6 +135,7 @@
       justify-content: space-evenly;
       align-items: none;
 
+
       margin-top: 50px;
     }
 
@@ -149,6 +147,21 @@
       object-fit: cover;
     }
 
+    main .product_div p {
+      text-align: center;
+    }
+
+    main .product_div 
+    .cars_div,
+    .cellphones_div, 
+    .shoes_div{
+      border: 1px solid;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      padding: 5px;
+    }
+
+
 
 
 
@@ -157,7 +170,7 @@
 <body>
   <header>
     <div class="left_div">
-      <img src="thumbnail1.jpg" alt="">
+      <img src="thumbnail1.svg" alt="">
     </div>
 
     <div class="center_div">
@@ -203,15 +216,20 @@
     </div>
 
     <div class="product_div">
-      <div class="cars_div">
-        <img src="thumbnail2.jpg" alt="">
-      </div>
+      <a href="product_cars.html">
+        <div class="cars_div">
+          <p>Cars</p>
+          <img src="thumbnail2.jpg" alt="">
+        </div>
+      </a>
 
-      <div class="cellphones">
+      <div class="cellphones_div">
+        <p>Smartphones</p>
         <img src="thumbnail3.jpg" alt="">
       </div>
 
-      <div class="shoes">
+      <div class="shoes_div">
+        <p>Shoes</p>
         <img src="thumbnail4.jpg" alt="">
       </div>
     </div>
