@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="website icon" type="png" href="thumbnail1.jpg">
+  
+
 
   <style>
     p {
@@ -15,14 +18,43 @@
       justify-content: space-between;
       align-items: center;
       padding: 0 20px;
+      background-color: azure;
 
       border: 1px solid;
     }
-    .right_div img{
+    .left_div img{
       width: 80px;
       height: 80px;
       border: 1px solid;
       display: block;
+      border-radius: 40px;
+      
+    }
+    .right_div button{
+      padding: 10px 15px;
+      border: 1px solid;
+      display: block;
+      border-radius:5px;
+      box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.40);
+      
+    }
+    .right_div button:hover{
+    
+     background-color: rgb(228, 213, 213);
+      
+    }
+    .right_div button:active{
+      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    
+    
+     
+   }
+
+
+    .right_div{
+      display: flex;
+      gap: 10px;
+     
     }
 
     .center_div p{
@@ -31,10 +63,22 @@
 
     .center_div .title {
       font-size: 25px;
+      font-size:50px;
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: 5px;
+      font-size: 50px;
     }
 
     .center_div .slogan {
-      font-size: 15px;
+      font-size: 10px;
+      font-size:10px;
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: 5px;
+      font-size: 30px;
     }
 
     nav{
@@ -46,7 +90,22 @@
     
     nav button {
       padding: 10px 20px;
+      box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.40);
+      font-size: 14px;
+
+
     }
+
+   nav button:hover{
+    background-color: rgb(199, 190, 190);
+     
+   }
+   nav button:active{
+     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+   
+   
+    
+  }
 
     nav {
       display: flex;
@@ -68,9 +127,9 @@
     main .sale_div img{
       width: 1400px;
       height: 300px;
-
       object-fit: cover;
       display: flex;
+      border-radius: 10px;
       
     }
 
@@ -85,6 +144,7 @@
     main .product_div img {
       width: 300px;
       height: 300px;
+      border-radius: 10px;
 
       object-fit: cover;
     }
@@ -96,7 +156,7 @@
 </head>
 <body>
   <header>
-    <div class="right_div">
+    <div class="left_div">
       <img src="thumbnail1.jpg" alt="">
     </div>
 
@@ -105,7 +165,7 @@
       <p class="slogan">Buy 1, take as many as you want</p>
     </div>
 
-    <div class="left_div">
+    <div class="right_div">
       <button class="login_bt">
         Login
       </button>
