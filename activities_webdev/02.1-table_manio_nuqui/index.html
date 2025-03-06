@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    p {
+      margin: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+
+      border: 1px solid;
+    }
+    .right_div img{
+      width: 80px;
+      height: 80px;
+      border: 1px solid;
+      display: block;
+    }
+
+    .center_div p{
+      text-align: center;
+    }
+
+    .center_div .title {
+      font-size: 25px;
+    }
+
+    .center_div .slogan {
+      font-size: 15px;
+    }
+
+    nav{
+      display: flex;
+      justify-content: space-evenly;
+
+      margin-top: 50px;
+    }
+    
+    nav button {
+      padding: 10px 20px;
+    }
+
+    nav {
+      display: flex;
+      
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+
+      margin-top: 30px;
+    }
+
+    main .sale_div {
+      display: flex;
+      justify-content: center;
+    }
+
+    main .sale_div img{
+      width: 1400px;
+      height: 300px;
+
+      object-fit: cover;
+      display: flex;
+      
+    }
+
+    main .product_div {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: none;
+
+      margin-top: 50px;
+    }
+
+    main .product_div img {
+      width: 300px;
+      height: 300px;
+
+      object-fit: cover;
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="right_div">
+      <img src="thumbnail1.jpg" alt="">
+    </div>
+
+    <div class="center_div">
+      <p class="title">SwiftCart</p>
+      <p class="slogan">Buy 1, take as many as you want</p>
+    </div>
+
+    <div class="left_div">
+      <button class="login_bt">
+        Login
+      </button>
+      
+      <button class="sign_bt">
+        Sign up
+      </button>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">
+       <button class="home_bt">
+        HOME
+      </button>
+    </a>
+   
+    <a href="product_cars.html">
+      <button class="product_bt">
+        PRODUCT
+      </button>
+    </a>
+    
+    <a href="about_us.html">
+      <button class="about_bt">
+        ABOUT US
+      </button>
+    </a>
+
+  </nav>
+
+  <main>
+    <div class="sale_div">
+      <img src="thumbnail5.jpg" alt="">
+    </div>
+
+    <div class="product_div">
+      <div class="cars_div">
+        <img src="thumbnail2.jpg" alt="">
+      </div>
+
+      <div class="cellphones">
+        <img src="thumbnail3.jpg" alt="">
+      </div>
+
+      <div class="shoes">
+        <img src="thumbnail4.jpg" alt="">
+      </div>
+    </div>
+  </main>
+  
+
+
+  
+  
+</body>
+</html>
