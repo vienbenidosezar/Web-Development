@@ -3,21 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="website icon" type="png" href="thumbnail1.jpg">
+  <title>SwiftCart Shoes</title>
+  <link rel="website icon" type="png" href="thumbnail1.svg">
   <style>
+
+    p{
+      margin: 0;
+    }
     nav {
       display: flex;
       flex-direction: column;
       justify-content: center;
 
       position: absolute;
+      margin-right: 20px;
       left: 50px;
       bottom: 0;
       top: 0;
 
-     
-      width: 100px;
+      
+      width: 150px;
+      border: 1px solid;
     }
 
     nav .center_div {
@@ -25,62 +31,188 @@
       flex-direction: column;
       justify-content: center;
       gap: 10px;
+
+      
     }
 
     nav .bottom_div {
+      display: flex;
+      justify-content: center;
       position: absolute;
       bottom: 10px;
-      left: 10px;
+      left: 0;
+      right: 0;
+
     }
 
     nav button {
+      font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+      
       padding: 7px 20px;
       padding-right: 15px;
-      width: 150px;
+      width: 100%;
       font-size: 17px;
       margin-bottom: 15px;
       border-radius: 5px;
-      box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.40);
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.30);
      
     }
 
     nav button:hover{
     background-color: rgb(199, 190, 190);
      
-   }
-   nav button:active{
-     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-   
-   
-    
-  }
+    }
+    nav button:active{
+      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 
-    main table, th, td {
+    }
+
+    main table, th, td{
       border: 1px solid black;
+      
+    }
+
+    main table img{
+      width: 200px;
     }
     
     main table .product_tr{
       height: 40px;
+      
     }
 
     main table .models_tr td{
-      width: 200px;
-      text-align: center;
+      width: 500px;
+
+      border: 1px solid;
+      transition: border 0.5s, background-color 0.5s;
+      
+    }
+
+    main table .models_tr td:hover{
+      width: 500px;
+
+      border: 1px solid orange;
+      background-color: rgb(255, 251, 247);
+      
     }
 
     main table{
       width: 100%;
+      
+
     }
 
     main {
       display: flex;
-      position: absolute;
-      width: 1500px;
+      justify-content: center;
 
-      right: 150px;
+      position: absolute;
+      right: 100px;
       top: 90px;
       bottom: 90px;
+      width: 1500px;
+
+
     }
+
+    .main_div {
+      display: flex;
+      width: 1200px;
+
+    }
+
+    .main_description_div {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+
+      width: 400px;
+      height: 220px;
+    }
+
+
+    .description_div {
+      width: 200px;
+
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .model_div {
+      margin-bottom: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .info_div {
+      margin-bottom: 10px;
+      margin-top: 10px;
+      display: flex;
+      justify-items: start;
+    }
+
+    .info_div .info_p{
+      margin-bottom: 10px;
+      display: flex;
+      
+    }
+
+    .info_div .price_p{
+      position: absolute;
+      bottom: 35px;
+      right: 0;
+      left: 0;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .order_div {
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      justify-content: center;
+
+    }
+
+    .order_div button {
+      padding: 5px 10px;
+      margin: 5px 5px;
+      color: white;
+
+    }
+
+    .order_div .order_bt{
+      background-color: rgb(255, 191, 72);
+      border: none;
+      border-radius: 5px;
+
+      transition: background-color 0.5s;
+    }
+
+    .order_div .add_bt{
+      background-color: rgb(255, 130, 46);
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.5s;
+    }
+
+    .order_div button:hover {
+      cursor: pointer;
+    }
+
+    .order_div .order_bt:hover{
+      background-color: rgb(255, 166, 0);;
+    }
+
+    .order_div .add_bt:hover{
+      background-color: rgb(255, 110, 0);
+    }
+
   </style>
 </head>
 <body>
@@ -100,48 +232,236 @@
   
       <div class="shoes_div">
         <a href="product_shoes.html">
-          <button class="shoes_bt">SHOE</button>
+          <button class="shoes_bt">SHOES</button>
         </a>
       </div>
     </div>
 
     <div class="bottom_div">
       <a href="index.html">
-        <button>BACK</button>
+        <button>Back</button>
       </a>
       
     </div>
   </nav>
   
   <main>
-    <table>
-      <tr class="product_tr">
-        <th>NIKE</th>
-        <th>ADIDAS</th>
-        <th>NEW BALANCE</th>
-        
-      </tr>
+    <div class="main_div">
+      <table>
+        <tr class="product_tr">
+          <th>Adidas</th>
+          <th>New Balance</th>
+          <th>Nike</th>
+          
+        </tr>
+  
+        <tr class="models_tr">
+          <td>
+            <div class="main_description_div">
+              <img src="Product-SHOES/01-addidasSuperstar82.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  Adidas Superstar 82
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">SUPERSTAR ORIGINALS. Built for basketball, adopted by hip hop and skate, the classic leather</p>
+                  <p class="price_p">PHP 6,000</p>
+                </div>
 
-      <tr class="models_tr">
-        <td>SHOES 1</td>
-        <td>SHOES 1</td>
-        <td>SHOES 1</td>
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
 
-      </tr>
 
-      <tr class="models_tr">
-        <td>SHOES 2</td>
-        <td>SHOES 2</td>
-        <td>SHOES 2</td>
+          <td>
+            <div class="main_description_div">
+              <img src="Product-SHOES/01-newBalnce550.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  New Balance BB550
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">The sole of the shoe is very sturdy and has great control. The insole even has a lair of Fiberglass, like that you would find in a boot</p>
+                  <p class="price_p">PHP 7,795.00</p>
+                </div>
 
-      </tr>
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
 
-      <tr class="models_tr">
-        <td>SHOES 3 </td>
-        <td>SHOES 3</td>
-        <td>SHOES 3</td>
-      </tr>
-    </table>
+
+          <td>
+            <div class="main_description_div">
+              <img src="Product-SHOES/01-nikeDunkLow.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  Nike Dunk Low
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">The Nike Dunk Low Retro returns with crisp overlays and original team colours. This basketball icon channels '80s vibes with premium leather</p>
+
+                  <p class="price_p">PHP 6,895</p>
+                </div>
+
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+         </td>
+  
+        </tr>
+  
+        <tr class="models_tr">
+          <td>
+            <div class="main_description_div">
+              <img src="Product-SHOES/02-addidasSuperstar2.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  Adidas Superstar II
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">Known as the Superstar II, the modern adidas Superstar rocks true-to-the-original details like a herringbone cupsole, zigzag 3-Stripes</p>
+                  <p class="price_p">PHP 7,000</p>
+                </div>
+
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
+
+
+                    <td>
+            <div class="main_description_div">
+              <img src="Product-SHOES/02-newBalance550.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  BMW M4 Coupe
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">Experience classic charm and modern flair with New Balance 550 shoes. Perfectly blending comfort and style for an elevated look</p>
+                  <p class="price_p">PHP 4,677</p>
+                </div>
+
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
+
+          
+          <td>
+            <div class="main_description_div">
+              <img src="Product-SHOES/02-nikeV2KRun.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  Nike V2K Run
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">The V2K is a look pulled straight from an early 2000s running catalogue. The chunky midsole and layered details add a perfectly vintage touch.</p>
+                  <p class="price_p">PHP 6,895</p>
+                </div>
+
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
+  
+        </tr>
+  
+        <tr class="models_tr">
+          <td>
+            <div class="main_description_div">
+              <img src="Product-SHOES/03-addidsSuperstarJJJJound.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  Adidas Superstar JJJJound
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">Handcrafted in Germany, premium leather wraps the shell toe and 3-Stripes with a textured finish.</p>
+                  <p class="price_p">PHP 15,000</p>
+                </div>
+
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
+
+
+          <td>
+            <div class="main_description_div">
+              <img src="Product-SHOES/03-newBalanceBBW550.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  New Balance BBW550
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">With its heritage as a 90s basketball shoe, the New Balance BBW550 is a retro kick that shines in utility and versatility on our wear tests.</p>
+                  <p class="price_p">PHP 6,300</p>
+                </div>
+
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
+
+
+          <td>
+            <div class="main_description_div">
+              <img src="Product-SHOES/03-nikeAirMaxDnPremium.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  Nike Air Max Dn Premium
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">The Air Max Dn features our Dynamic Air unit system of dual-pressure tubes, creating a responsive sensation with every step</p>
+                  <p class="price_p">PHP 10,895</p>
+                </div>
+
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
+
+        </tr>
+      </table>
+
+    </div>
   </main>
 </body>
 </html>

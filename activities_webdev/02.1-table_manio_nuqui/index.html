@@ -3,14 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>SwiftCart</title>
   <link rel="website icon" type="png" href="thumbnail1.svg">
   
 
 
   <style>
-    p {
+    p, button {
       margin: 0;
+      font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+
+    }
+    p:hover{
+      cursor: default;
     }
 
     header {
@@ -59,23 +64,14 @@
     }
 
     .center_div .title {
-      font-size: 25px;
-      font-size:50px;
-      font-family: "Playfair Display", serif;
-      font-style: italic;
-      font-weight: 400;
       letter-spacing: 5px;
       font-size: 50px;
     }
 
     .center_div .slogan {
-      font-size: 10px;
-      font-size:10px;
-      font-family: "Playfair Display", serif;
-      font-style: italic;
       font-weight: 400;
       letter-spacing: 5px;
-      font-size: 30px;
+      font-size: 20px;
     }
 
     nav{
@@ -99,8 +95,7 @@
    }
    nav button:active{
      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-   
-   
+  
     
   }
 
@@ -131,13 +126,14 @@
     }
 
     main .product_div {
+      position: relative;
       display: flex;
       justify-content: space-evenly;
       align-items: none;
 
-
       margin-top: 50px;
     }
+
 
     main .product_div img {
       width: 300px;
@@ -147,18 +143,36 @@
       object-fit: cover;
     }
 
-    main .product_div p {
+    main .product_div img:hover {
+      height: 300px;
+
+    }
+
+    main .product_div p, a {
       text-align: center;
+      color: black;
+      text-decoration: none;
+
+      margin-bottom: 5px;
     }
 
     main .product_div 
     .cars_div,
     .cellphones_div, 
-    .shoes_div{
-      border: 1px solid;
-      border-top-right-radius: 10px;
-      border-top-left-radius: 10px;
+    .shoes_div {
+      border-radius: 10px;
       padding: 5px;
+      transition: background-color 0.5s;
+
+
+    }
+
+    main .product_div 
+    .cars_div:hover,
+    .cellphones_div:hover, 
+    .shoes_div:hover {
+      background-color: rgb(216, 216, 216);
+
     }
 
 
@@ -175,7 +189,7 @@
 
     <div class="center_div">
       <p class="title">SwiftCart</p>
-      <p class="slogan">Buy 1, take as many as you want</p>
+      <p class="slogan">Your Perfect Fit Awaits</p>
     </div>
 
     <div class="right_div">
@@ -219,19 +233,24 @@
       <a href="product_cars.html">
         <div class="cars_div">
           <p>Cars</p>
-          <img src="thumbnail2.jpg" alt="">
+          <img src="thumbnail2.png" alt="">
+        </div>
+      </a>
+      
+      <a href="product_cellphones.html">
+        <div class="cellphones_div">
+          <p>Smartphones</p>
+          <img src="thumbnail3.png" alt="">
         </div>
       </a>
 
-      <div class="cellphones_div">
-        <p>Smartphones</p>
-        <img src="thumbnail3.jpg" alt="">
-      </div>
-
-      <div class="shoes_div">
-        <p>Shoes</p>
-        <img src="thumbnail4.jpg" alt="">
-      </div>
+      <a href="product_shoes.html">
+        <div class="shoes_div">
+          <p>Shoes</p>
+          <img src="thumbnail4.png" alt="">
+        </div>
+      </a>
+      
     </div>
   </main>
   

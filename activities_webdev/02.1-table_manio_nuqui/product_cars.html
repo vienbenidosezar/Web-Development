@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="website icon" type="png" href="logo.svg">
+  <title>SwiftCart Cars</title>
+  <link rel="website icon" type="png" href="thumbnail1.svg">
   <style>
 
     p{
@@ -46,6 +46,8 @@
     }
 
     nav button {
+      font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+      
       padding: 7px 20px;
       padding-right: 15px;
       width: 100%;
@@ -53,8 +55,8 @@
       margin-bottom: 15px;
       border-radius: 5px;
       box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.30);
-     
     }
+
 
     nav button:hover{
     background-color: rgb(199, 190, 190);
@@ -65,13 +67,13 @@
 
     }
 
-    main table, th, td {
+    main table, th, td{
       border: 1px solid black;
+      
     }
 
     main table img{
       width: 200px;
-      border: 1px solid;
     }
     
     main table .product_tr{
@@ -81,8 +83,19 @@
 
     main table .models_tr td{
       width: 500px;
+
+      border: 1px solid;
+      transition: border 0.5s, background-color 0.5s;
+      
     }
 
+    main table .models_tr td:hover{
+      width: 500px;
+
+      border: 1px solid orange;
+      background-color: rgb(255, 251, 247);
+      
+    }
 
     main table{
       width: 100%;
@@ -95,13 +108,11 @@
       justify-content: center;
 
       position: absolute;
-      right: 150px;
+      right: 100px;
       top: 90px;
       bottom: 90px;
-      
       width: 1500px;
 
-      border: 1px solid blue;
 
     }
 
@@ -113,20 +124,21 @@
 
     .main_description_div {
       display: flex;
-      border: 1px solid pink;
       justify-content: center;
       align-content: center;
 
       width: 400px;
-
-
+      height: 220px;
     }
+
+
     .description_div {
       width: 200px;
 
-      border: 1px solid orange;
-
       position: relative;
+      display: flex;
+      flex-direction: column;
+
     }
 
     .model_div {
@@ -137,10 +149,15 @@
 
     .info_div {
       margin-bottom: 10px;
+      margin-top: 10px;
+      display: flex;
+      justify-items: start;
     }
 
     .info_div .info_p{
       margin-bottom: 10px;
+      display: flex;
+      
     }
 
     .info_div .price_p{
@@ -160,14 +177,42 @@
       left: 0;
       justify-content: center;
 
-      border: 1px solid ;
     }
 
     .order_div button {
       padding: 5px 10px;
-      margin: 0px 5px;
+      margin: 5px 5px;
+      color: white;
+
     }
-    
+
+    .order_div .order_bt{
+      background-color: rgb(255, 191, 72);
+      border: none;
+      border-radius: 5px;
+
+      transition: background-color 0.5s;
+    }
+
+    .order_div .add_bt{
+      background-color: rgb(255, 130, 46);
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.5s;
+    }
+
+    .order_div button:hover {
+      cursor: pointer;
+    }
+
+    .order_div .order_bt:hover{
+      background-color: rgb(255, 166, 0);;
+    }
+
+    .order_div .add_bt:hover{
+      background-color: rgb(255, 110, 0);
+    }
+
   </style>
 </head>
 <body>
@@ -285,12 +330,12 @@
               <img src="Product-CARS/02-porsche911GT3.png" alt="">
               <div class="description_div">
                 <div class="model_div">
-                  911 Carrera T
+                  Porsche 911 GT3
                 </div>
                 
                 <div class="info_div">
-                  <p class="info_p">The 911 Carrera T provides even more agility, dynamism and unbridled emotions, especially on winding mountain and country roads.</p>
-                  <p class="price_p">PHP 4,350,000</p>
+                  <p class="info_p">The Porsche 911 GT3 is a high-performance homologation model of the Porsche 911 sports car. It is a range of high-performance models</p>
+                  <p class="price_p">PHP 5,990,000</p>
                 </div>
 
                 <div class="order_div">
@@ -307,12 +352,12 @@
               <img src="Product-CARS/02-BMWM4Coupe.png" alt="">
               <div class="description_div">
                 <div class="model_div">
-                  911 Carrera T
+                  BMW M4 Coupe
                 </div>
                 
                 <div class="info_div">
-                  <p class="info_p">The 911 Carrera T provides even more agility, dynamism and unbridled emotions, especially on winding mountain and country roads.</p>
-                  <p class="price_p">PHP 4,350,000</p>
+                  <p class="info_p">The M TwinPower Turbo inline 6-cylinder petrol engine features superior power delivery and the striking characteristic M engine sound</p>
+                  <p class="price_p">PHP 9,790,000</p>
                 </div>
 
                 <div class="order_div">
@@ -329,12 +374,12 @@
               <img src="Product-CARS/02-chevroletTrax.png" alt="">
               <div class="description_div">
                 <div class="model_div">
-                  911 Carrera T
+                  Chevrolet Trax
                 </div>
                 
                 <div class="info_div">
-                  <p class="info_p">The 911 Carrera T provides even more agility, dynamism and unbridled emotions, especially on winding mountain and country roads.</p>
-                  <p class="price_p">PHP 4,350,000</p>
+                  <p class="info_p">The redesigned Chevrolet Trax, now larger with more cargo space, offers thrilling drives with its tech-rich features, spacious cabin, and efficient engine.</p>
+                  <p class="price_p">PHP 1,793,888</p>
                 </div>
 
                 <div class="order_div">
@@ -353,12 +398,12 @@
               <img src="Product-CARS/03-porscheCarrerGTS.png" alt="">
               <div class="description_div">
                 <div class="model_div">
-                  911 Carrera T
+                  Porsche 911 Carrera GTS
                 </div>
                 
                 <div class="info_div">
-                  <p class="info_p">The 911 Carrera T provides even more agility, dynamism and unbridled emotions, especially on winding mountain and country roads.</p>
-                  <p class="price_p">PHP 4,350,000</p>
+                  <p class="info_p">The Porsche 911 Carrera GTS is a high-performance sports car with a 3.6-liter flat-6 engine, electric exhaust turbocharger, and electric motor.</p>
+                  <p class="price_p">PHP 3,590,000</p>
                 </div>
 
                 <div class="order_div">
@@ -375,12 +420,12 @@
               <img src="Product-CARS/03-BMWi4.png" alt="">
               <div class="description_div">
                 <div class="model_div">
-                  911 Carrera T
+                  BMW i4
                 </div>
                 
                 <div class="info_div">
-                  <p class="info_p">The 911 Carrera T provides even more agility, dynamism and unbridled emotions, especially on winding mountain and country roads.</p>
-                  <p class="price_p">PHP 4,350,000</p>
+                  <p class="info_p">Sporty in style, performance, and attitude, the new i4 Gran Coupe sets a new standard for all-electric sports cars.</p>
+                  <p class="price_p">PHP 4,490,000</p>
                 </div>
 
                 <div class="order_div">
@@ -401,8 +446,8 @@
                 </div>
                 
                 <div class="info_div">
-                  <p class="info_p">The 911 Carrera T provides even more agility, dynamism and unbridled emotions, especially on winding mountain and country roads.</p>
-                  <p class="price_p">PHP 4,350,000</p>
+                  <p class="info_p">A real Chevy to the core, the Chevrolet Tracker offers a stylish ride and superb fuel efficiency.</p>
+                  <p class="price_p">PHP 1,142,888</p>
                 </div>
 
                 <div class="order_div">

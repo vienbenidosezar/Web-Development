@@ -3,11 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="website icon" type="png" href="thumbnail1.jpg">
+  <title>SwiftCart About Us</title>
+  <link rel="website icon" type="png" href="thumbnail1.svg">
   <style>
       p {
         margin: 0;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        line-height: 25px;
+      }
+
+      button {
+        font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+
+        font-size: 17px;
       }
 
       nav {
@@ -35,7 +43,7 @@
     }
 
     nav .bottom_div button {
-      padding: 10px 15px;
+      padding: 7px 20px;
     }
 
     main {
@@ -51,7 +59,7 @@
 
       width: 1500px;
 
-      border: 1px solid;
+
     }
 
     main .about_div {
@@ -59,11 +67,85 @@
       width: 600px;
       text-align: center;
 
-      border: 1px solid;
     }
 
     main .logo_div img{
+      position: relative;
       width: 300px;
+
+      
+      z-index: 2;
+    }
+
+    main .design_logo_div {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 700px;
+      height: 700px;
+
+    }
+
+
+
+    main .design_logo_div .product_1 img {
+      width: 300px;
+      z-index: 1;
+      position: absolute;
+
+      right: 20px;
+      bottom: 150px;
+
+      transition: width 1s, right 1s, bottom 1s;
+
+    }
+
+    main .design_logo_div .product_1 img:hover {
+      width: 350px;
+      position: absolute;
+      z-index: 1;
+
+      right: 25px;
+      bottom: 155px;
+    }
+
+    main .design_logo_div .product_2 img {
+      width: 250px;
+      position: absolute;
+
+      left: 100px;
+      top: 30px;
+
+      transition: width 1s, left 1s, bottom 1s;
+    }
+
+    main .design_logo_div .product_2 img:hover {
+      width: 290px;
+      position: absolute;
+
+      left: 80px;
+      top: 30px;
+
+    }
+
+    main .design_logo_div .product_3 img {
+      width: 250px;
+      position: absolute;
+
+      left: 20px;
+      bottom: 30px;
+
+      transition: width 1s, left 1s, bottom 1s;
+    }
+
+    main .design_logo_div .product_3 img:hover {
+      width: 290px;
+      position: absolute;
+
+      left: 20px;
+      bottom: 30px;
     }
     
   </style>
@@ -80,8 +162,22 @@
   </nav>
 
   <main>
-    <div class="logo_div">
-      <img src="thumbnail6.png" alt="">
+    <div class="design_logo_div">
+      <div class="product_1">
+        <img src="thumbnail7.png" alt="">
+      </div>
+      
+      <div class="product_2">
+        <img src="thumbnail8.png" alt="">
+      </div>
+      
+      <div class="product_3">
+        <img src="thumbnail9.png" alt="">
+      </div>
+
+      <div class="logo_div">
+        <img src="thumbnail6.png" alt="">
+      </div>
     </div>
 
     <div class="about_div">

@@ -3,21 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="website icon" type="png" href="thumbnail1.jpg">
+  <title>SwiftCart Cars</title>
+  <link rel="website icon" type="png" href="thumbnail1.svg">
   <style>
+
+    p{
+      margin: 0;
+      font-family: ;
+    }
     nav {
       display: flex;
       flex-direction: column;
       justify-content: center;
 
       position: absolute;
+      margin-right: 20px;
       left: 50px;
       bottom: 0;
       top: 0;
 
       
-      width: 100px;
+      width: 150px;
+      border: 1px solid;
     }
 
     nav .center_div {
@@ -25,62 +32,188 @@
       flex-direction: column;
       justify-content: center;
       gap: 10px;
+
+      
     }
 
     nav .bottom_div {
+      display: flex;
+      justify-content: center;
       position: absolute;
       bottom: 10px;
-      left: 10px;
+      left: 0;
+      right: 0;
+
     }
 
     nav button {
+      font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+      
       padding: 7px 20px;
       padding-right: 15px;
-      width: 150px;
+      width: 100%;
       font-size: 17px;
       margin-bottom: 15px;
       border-radius: 5px;
-      box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.40);
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.30);
      
     }
 
     nav button:hover{
     background-color: rgb(199, 190, 190);
      
-   }
-   nav button:active{
-     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-   
-   
-    
-  }
+    }
+    nav button:active{
+      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 
-    main table, th, td {
+    }
+
+    main table, th, td{
       border: 1px solid black;
+      
+    }
+
+    main table img{
+      width: 200px;
     }
     
     main table .product_tr{
       height: 40px;
+      
     }
 
     main table .models_tr td{
-      width: 200px;
-      text-align: center;
+      width: 500px;
+
+      border: 1px solid;
+      transition: border 0.5s, background-color 0.5s;
+      
+    }
+
+    main table .models_tr td:hover{
+      width: 500px;
+
+      border: 1px solid orange;
+      background-color: rgb(255, 251, 247);
+      
     }
 
     main table{
       width: 100%;
+      
+
     }
 
     main {
       display: flex;
-      position: absolute;
-      width: 1500px;
+      justify-content: center;
 
-      right: 150px;
+      position: absolute;
+      right: 100px;
       top: 90px;
       bottom: 90px;
+      width: 1500px;
+
+
     }
+
+    .main_div {
+      display: flex;
+      width: 1200px;
+
+    }
+
+    .main_description_div {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+
+      width: 400px;
+      height: 220px;
+    }
+
+
+    .description_div {
+      width: 200px;
+
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .model_div {
+      margin-bottom: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .info_div {
+      margin-bottom: 10px;
+      margin-top: 10px;
+      display: flex;
+      justify-items: start;
+    }
+
+    .info_div .info_p{
+      margin-bottom: 10px;
+      display: flex;
+      
+    }
+
+    .info_div .price_p{
+      position: absolute;
+      bottom: 35px;
+      right: 0;
+      left: 0;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .order_div {
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      justify-content: center;
+
+    }
+
+    .order_div button {
+      padding: 5px 10px;
+      margin: 5px 5px;
+      color: white;
+
+    }
+
+    .order_div .order_bt{
+      background-color: rgb(255, 191, 72);
+      border: none;
+      border-radius: 5px;
+
+      transition: background-color 0.5s;
+    }
+
+    .order_div .add_bt{
+      background-color: rgb(255, 130, 46);
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.5s;
+    }
+
+    .order_div button:hover {
+      cursor: pointer;
+    }
+
+    .order_div .order_bt:hover{
+      background-color: rgb(255, 166, 0);;
+    }
+
+    .order_div .add_bt:hover{
+      background-color: rgb(255, 110, 0);
+    }
+
   </style>
 </head>
 <body>
@@ -100,7 +233,7 @@
   
       <div class="shoes_div">
         <a href="product_shoes.html">
-          <button class="shoes_bt">SHOE</button>
+          <button class="shoes_bt">SHOES</button>
         </a>
       </div>
     </div>
@@ -114,34 +247,222 @@
   </nav>
   
   <main>
-    <table>
-      <tr class="product_tr">
-        <th>REALME</th>
-        <th>IPHONE</th>
-        <th>SAMSUNG</th>
-        
-      </tr>
+    <div class="main_div">
+      <table>
+        <tr class="product_tr">
+          <th>Iphone</th>
+          <th>Nothing Phone</th>
+          <th>Samsung</th>
+          
+        </tr>
+  
+        <tr class="models_tr">
+          <td>
+            <div class="main_description_div">
+              <img src="Product-CELLPHONE/01-iphone11ProMaxx.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  Iphone 11 Pro Max
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">The iPhone 11 Pro Max uses Apple's latest proprietary A13 Bionic chip. </p>
+                  <p class="price_p">PHP 23,809</p>
+                </div>
 
-      <tr class="models_tr">
-        <td>phone 1</td>
-        <td>phone 1</td>
-        <td>phone 1</td>
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
 
-      </tr>
 
-      <tr class="models_tr">
-        <td>phone 2</td>
-        <td>phone 2</td>
-        <td>phone 2</td>
+          <td>
+            <div class="main_description_div">
+              <img src="Product-CELLPHONE/01-nothingPhon1.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  Nothing Phone 1
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">This extraordinary dual camera has two advanced 50 MP sensors. For brilliant realism. Shoots exceptionally stable videos</p>
+                  <p class="price_p">PHP 22,990</p>
+                </div>
 
-      </tr>
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
 
-      <tr class="models_tr">
-        <td>phone 3</td>
-        <td>phone 3</td>
-        <td>phone 3</td>
-      </tr>
-    </table>
+
+          <td>
+            <div class="main_description_div">
+              <img src="Product-CELLPHONE/01-samsungS10.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  Samsung S10
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">Meet the next generation Galaxy S10. With the new Infinity-O Display, invisible security, and intelligence that changes the way you work.</p>
+
+                  <p class="price_p">PHP  55,990</p>
+                </div>
+
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+         </td>
+  
+        </tr>
+  
+        <tr class="models_tr">
+          <td>
+            <div class="main_description_div">
+              <img src="Product-CELLPHONE/02-iphone12ProMaxx.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  Iphone 12 Pro Max
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">The Apple iPhone 12 Pro Max, features a 6.7-inch display, an A14 Bionic chipset, 6GB RAM, up to 512GB storage, and a 3,687 mAh battery.</p>
+                  <p class="price_p">PHP 28,990</p>
+                </div>
+
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
+
+
+                    <td>
+            <div class="main_description_div">
+              <img src="Product-CELLPHONE/02-nothingPhon2.png.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  Nothing Phone 2
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">Energy efficient display. Beauty lasts. Now bigger and brighter, Phone (2) has a 6.7” flexible LTPO AMOLED display with 1600 nits peak pixel brightness</p>
+                  <p class="price_p">PHP 38,990</p>
+                </div>
+
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
+
+          
+          <td>
+            <div class="main_description_div">
+              <img src="Product-CELLPHONE/02-samsungS20ultra.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  Samsung S20 Ultra 5G
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">The Samsung Galaxy S20 Ultra 5G, features a 6.9-inch display, Exynos 990 chipset, 16GB RAM, up to 512GB storage, and a 5,000 mAh battery.</p>
+                  <p class="price_p">PHP 69,990</p>
+                </div>
+
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
+  
+        </tr>
+  
+        <tr class="models_tr">
+          <td>
+            <div class="main_description_div">
+              <img src="Product-CELLPHONE/03-iphone16ProMaxx.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  Iphone 16 Pro Max
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">iPhone 16 Pro Max has a strong and light titanium design with a larger 6.9-inch Super Retina XDR display.</p>
+                  <p class="price_p">PHP 39,990</p>
+                </div>
+
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
+
+
+          <td>
+            <div class="main_description_div">
+              <img src="Product-CELLPHONE/03-nothingPhon2a.png.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  Nothing Phone 2a
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">Co-engineered MediaTek Dimensity Pro processor. Exceptional dual 50 MP rear camera. Wonderfully bright flexible AMOLED display.</p>
+                  <p class="price_p">PHP 18,990</p>
+                </div>
+
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
+
+
+          <td>
+            <div class="main_description_div">
+              <img src="Product-CELLPHONE/03-samsungS24ultra.png" alt="">
+              <div class="description_div">
+                <div class="model_div">
+                  Samsung S24 Ultra
+                </div>
+                
+                <div class="info_div">
+                  <p class="info_p">Galaxy S24 Ultra has a Quad Tele camera system that can capture clearer, higher resolution zoomed-in photos than Galaxy S23 Ultra</p>
+                  <p class="price_p">PHP 71,990</p>
+                </div>
+
+                <div class="order_div">
+                  <button class="order_bt">Order</button>
+                  <button class="add_bt">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </td>
+
+        </tr>
+      </table>
+
+    </div>
   </main>
 </body>
 </html>
