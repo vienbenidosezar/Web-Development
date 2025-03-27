@@ -4,72 +4,155 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link href="index.css">
   <style>
     main{
       display: flex;
       flex-direction: column;
+      
     }
     .name_div{
       display: flex;
       flex-direction: column;
     }
+    .inner_div{
+      height: 800px;
+      width: 500px;
+      border: solid;
+      border-width: 3px;
+      padding-top: 20px;
+      margin-left: 500px;
+      padding-left: 20px;
+      padding-right: 20px;
+      
+    
+    }
+    .head{
+      margin-bottom: 30px;
+      margin-left: 75px;
+      font-size: 28px;
+    }
+    .lastName{
+      margin-bottom: 20px;
+    }
+    .firstName{
+      margin-bottom: 20px;
+    }
+    
+    .middleName{
+      margin-bottom: 20px;
+    }
+    .email_div{
+      margin-bottom: 20px;
+    }
+    .password_div{
+      margin-bottom: 20px;
+    }
+    .gender_inner{
+      margin-bottom: 20px;
+    }
+    .birthdate_div{
+      margin-bottom: 20px;
+    }
+    .interest__div{
+      margin-bottom: 20px;
+    }
+    .country__div{
+      margin-bottom: 20px;
+    }
+    .profile_title{
+      margin-bottom: 45px;
+    }
+    .comment_div{
+      margin-bottom: 50px;
+      
+    }
   </style>
 </head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <body>
   <main>
     <div class="inner_div">
       <form action="">
+
+        <div class="head">
+          <label for="header">PERSONAL INFORMATION</label>
+          
+        </div>
+        <hr>
+        
         <div class="name_div">
-          <div class="name lastName">
-            <label for="fullName">Last Name</label>
+          <div class="lastName">
+            <label for="fullName">LAST NAME:</label>
             <input type="text" name="lastName" required>
           </div>
   
-          <div class="name firstName">
-            <label for="name firstName">First Name</label>
+          <div class="firstName">
+            <label for="name firstName">FIRST NAME:</label>
             <input type="text" name="firstName" required>
           </div>
   
-          <div class="name middleName">
-            <label for="name middleName">Middle Name</label>
+          <div class="middleName">
+            <label for="name middleName">MIDDLE NAME:</label>
             <input type="text" name="middleName" required>
           </div>
+
+        
   
         </div>
+        <hr>
+
   
         <div class="email_div">
-          <label for="email">Email</label>
+          <label for="email">EMAIL:</label>
           <input type="email" name="email" required>
         </div>
   
         <div class="password_div">
-          <label for="password">Password</label>
+          <label for="password">PASSWORD:</label>
           <input type="password" name="password" required>
         </div>
+
+        <hr>
   
         <div class="gender__div">
-          <div class="gender_title">
-            <label for="gender">Gender</label>
-          </div>
-
+          
           <div class="gender_inner">
-            <input type="radio" id="g1"><label for="g1">Male</label>
+            <label for="gender" class="Gender">GENDER:</label>
+            
+          
+            <input type="radio" id="g1"><label for="g1">MALE</label>
     
-            <input type="radio" id="g2"><label for="g2">Female</label>
+            <input type="radio" id="g2"><label for="g2">FEMALE</label>
 
-            <input type="radio" id="g4"><label for="g3">Other</label>
+            <input type="radio" id="g4"><label for="g3">OTHER</label>
           </div>
   
         </div>
 
         <div class="birthdate_div">
-          <label for="date">Date of birth</label>
+          <label for="date">DATE OF BIRTH:</label>
           <input type="date" name="password" required>
         </div>
 
         <div class="interest__div">
           <div class="interest_title">
-            <label for="interest">Interest</label>
+            <label for="interest">INTEREST:</label>
         </div>
 
           <div class="interest_inner">
@@ -86,7 +169,7 @@
 
         <div class="country__div">
           <div class="country_title">
-            <label for="country">Country</label>
+            <label for="country">COUNTRY:</label>
           </div>
 
           <div class="Country_inner">
@@ -106,13 +189,13 @@
 
         <div class="profile__div">
           <div class="profile_title">
-            <label for="interest">Profile</label>
+            <label for="interest">PROFILE:</label>
             <input type="file" name="file" required>
 
           </div>
 
           <div class="comment_div">
-            <h2>Comment Here!!</h2>
+            <h2>COMMENT HERE!!</h2>
             <textarea id="comment" placeholder="Add your comment here..."></textarea><br>
             
         </div>
