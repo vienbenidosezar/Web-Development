@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    main{
+      display: flex;
+      flex-direction: column;
+    }
+    .name_div{
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="inner_div">
+      <form action="">
+        <div class="name_div">
+          <div class="name lastName">
+            <label for="fullName">Last Name</label>
+            <input type="text" name="lastName" required>
+          </div>
+  
+          <div class="name firstName">
+            <label for="name firstName">First Name</label>
+            <input type="text" name="firstName" required>
+          </div>
+  
+          <div class="name middleName">
+            <label for="name middleName">Middle Name</label>
+            <input type="text" name="middleName" required>
+          </div>
+  
+        </div>
+  
+        <div class="email_div">
+          <label for="email">Email</label>
+          <input type="email" name="email" required>
+        </div>
+  
+        <div class="password_div">
+          <label for="password">Password</label>
+          <input type="password" name="password" required>
+        </div>
+  
+        <div class="gender__div">
+          <div class="gender_title">
+            <label for="gender">Gender</label>
+          </div>
+
+          <div class="gender_inner">
+            <input type="radio" id="g1"><label for="g1">Male</label>
+    
+            <input type="radio" id="g2"><label for="g2">Female</label>
+
+            <input type="radio" id="g4"><label for="g3">Other</label>
+          </div>
+  
+        </div>
+
+      </form>
+      
+    </div>
+  </main>
+  
+</body>
+</html>
