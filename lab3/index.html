@@ -6,208 +6,370 @@
   <title>Document</title>
   <link href="index.css">
   <style>
+    body{
+      margin: 0;
+    }
+    * {
+      font-size: 15px;
+
+    }
     main{
       display: flex;
       flex-direction: column;
-      
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      left: 0;
+      right: 0;
+
+      border: 1px solid blue;
+
+      padding: 20px;
+
+      background-image: linear-gradient(rgb(209, 248, 239), rgb(161, 227, 249), rgb(54, 116, 181));
+
+    }
+    .outer_div{
+      display: flex;
+      padding: 1px;
+
+      border-radius: 15px;
+      box-shadow: 0 0 2px;
+      background-color: rgb(0, 0, 0);
+
+    }
+    .inner_div{
+      display: flex;
+      width: 500px;
+      justify-content: center;
+      height: 100%;
+      border-radius: 15px;
+
+      background-color: white;
+    }
+
+    hr{
+      z-index: 3;
+      border: 1px solid rgb(0, 0, 0);
+      border-radius: 5px;
+    }
+
+    h1{
+      font-size: 25px;
+      text-align: center;
     }
     .name_div{
       display: flex;
       flex-direction: column;
+      width: 350px;
     }
-    .inner_div{
-      height: 800px;
-      width: 500px;
-      border: solid;
-      border-width: 3px;
-      padding-top: 20px;
-      margin-left: 500px;
-      padding-left: 20px;
-      padding-right: 20px;
-      
-    
+
+    .name_div .name{
+      margin: 10px 5px;
     }
-    .head{
-      margin-bottom: 30px;
-      margin-left: 75px;
-      font-size: 28px;
+
+    .name_div .name input{
+      margin-top: 3px;
+      margin-left: 15px;
+      width: 300px;
+      padding: 3px;
     }
-    .lastName{
-      margin-bottom: 20px;
-    }
-    .firstName{
-      margin-bottom: 20px;
-    }
-    
-    .middleName{
-      margin-bottom: 20px;
-    }
+
     .email_div{
-      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      width: 350px;
+      margin: 15px 5px;
     }
+
+    .email_div input{
+      margin-top: 3px;
+      margin-left: 15px;
+      width: 250px;
+      padding: 3px;
+    }
+
     .password_div{
-      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      width: 350px;
+      margin: 15px 5px;
     }
+
+    .password_div input{
+      margin-top: 3px;
+      margin-left: 15px;
+      width: 250px;
+      padding: 3px;
+    }
+
+    .gender_div{
+      display: flex;
+      flex-direction: column;
+      width: 350px;
+      margin: 15px 5px;
+    }
+
     .gender_inner{
-      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      width: 100px;
+
+      margin-left: 15px;
+      margin-top: 5px;
+      margin-bottom: 5px;
     }
+
     .birthdate_div{
-      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      margin: 15px 0;
     }
+
+    .birthdate_div input{
+      margin-left: 15px;
+      width: 150px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    hr{
+      margin: 20px 0;
+    }
+
     .interest__div{
-      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
     }
-    .country__div{
-      margin-bottom: 20px;
+
+    .interest_inner{
+      display: flex;
+      flex-direction: column;
+      width: 90px;
+      margin-left: 10px;
+      margin-top: 5px;
+      margin-bottom: 5px;
     }
+
+    .country_div{
+      display: flex;
+      flex-direction: column;
+      margin: 15px 0;
+    }
+
+    .country_div label{
+      cursor: pointer;
+    }
+
+    .country_inner{
+      margin-left: 10px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    .country_inner select,
+    .gender_inner input, 
+    .interest_inner input, 
+    .profile_div input{
+      cursor: pointer;
+    }
+
+    .profile_div {
+      display: flex;
+      flex-direction: column;
+    }
+
     .profile_title{
-      margin-bottom: 45px;
-    }
-    .comment_div{
-      margin-bottom: 50px;
+      display: flex;
+      flex-direction: column;
       
+      margin-left: 10px;
+      margin-top: 5px;
+      margin-bottom: 5px;
     }
+
+    textarea{
+      resize: none;
+    }
+
+    .comment_div{
+      display: flex;
+      flex-direction: column;
+
+      margin: 10px 0;
+    }
+
+    .submit_div{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .submit_div input{
+      padding: 10px 143px;
+    }
+
   </style>
 </head>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <body>
   <main>
-    <div class="inner_div">
-      <form action="">
-
-        <div class="head">
-          <label for="header">PERSONAL INFORMATION</label>
+    <div class="outer_div">
+      <div class="inner_div">
+        <form action="">
+          <h1>Registration Form</h1>
+          <hr>
           
-        </div>
-        <hr>
-        
-        <div class="name_div">
-          <div class="lastName">
-            <label for="fullName">LAST NAME:</label>
-            <input type="text" name="lastName" required>
-          </div>
-  
-          <div class="firstName">
-            <label for="name firstName">FIRST NAME:</label>
-            <input type="text" name="firstName" required>
-          </div>
-  
-          <div class="middleName">
-            <label for="name middleName">MIDDLE NAME:</label>
-            <input type="text" name="middleName" required>
-          </div>
-
-        
-  
-        </div>
-        <hr>
-
-  
-        <div class="email_div">
-          <label for="email">EMAIL:</label>
-          <input type="email" name="email" required>
-        </div>
-  
-        <div class="password_div">
-          <label for="password">PASSWORD:</label>
-          <input type="password" name="password" required>
-        </div>
-
-        <hr>
-  
-        <div class="gender__div">
-          
-          <div class="gender_inner">
-            <label for="gender" class="Gender">GENDER:</label>
-            
-          
-            <input type="radio" id="g1"><label for="g1">MALE</label>
+          <div class="name_div">
+            <div class="name lastName">
+              <label for="fullName">Last Name</label>
+              <input type="text" name="lastName" required>
+            </div>
     
-            <input type="radio" id="g2"><label for="g2">FEMALE</label>
-
-            <input type="radio" id="g4"><label for="g3">OTHER</label>
-          </div>
-  
-        </div>
-
-        <div class="birthdate_div">
-          <label for="date">DATE OF BIRTH:</label>
-          <input type="date" name="password" required>
-        </div>
-
-        <div class="interest__div">
-          <div class="interest_title">
-            <label for="interest">INTEREST:</label>
-        </div>
-
-          <div class="interest_inner">
-            <input type="checkbox" id="c1"><label for="c1">Reading</label>
+            <div class="name firstName">
+              <label for="name firstName">First Name</label>
+              <input type="text" name="firstName" required>
+            </div>
     
-            <input type="checkbox" id="c2"><label for="c2">Sports</label>
-
-            <input type="checkbox" id="c3"><label for="c3">Music</label>
-
-            <input type="checkbox" id="c4"><label for="c4">Travel</label>
+            <div class="name middleName">
+              <label for="name middleName">Middle Name</label>
+              <input type="text" name="middleName" required>
+            </div>
+          </div>
+          <hr>
+    
+          <div class="email_div">
+            <label for="email">Email</label>
+            <input type="email" name="email" required>
+          </div>
+    
+          <div class="password_div">
+            <label for="password">Password</label>
+            <input type="password" name="password" required>
           </div>
   
-        </div>
-
-        <div class="country__div">
-          <div class="country_title">
-            <label for="country">COUNTRY:</label>
+          <hr>
+    
+          <div class="gender__div">
+            <label for="gender" class="Gender">Gender</label>
+            <div class="gender_inner">
+              <label for="g1">
+                <input type="radio" id="g1" name="gender">
+                  Male
+              </label>
+  
+              <label for="g2">
+                <input type="radio" id="g2" name="gender">
+                Female
+              </label>
+   
+              <label for="g3">
+                <input type="radio" id="g3" name="gender">
+                Other
+              </label>
+            </div>
+    
           </div>
-
-          <div class="Country_inner">
-
-            
-              
-              <li><input type="checkbox" id="c1"><label for="c1">Philippines</label></li>
+  
+          <div class="birthdate_div">
+            <label for="date">Date of Birth</label>
+            <input type="date" name="date" required>
+          </div>
+  
+          <hr>
+  
+          <div class="interest__div">
+            <div class="interest_title">
+              <label for="interest">Interest</label>
+            </div>
+            <div class="interest_inner">
+              <label for="c1">
+                <input type="checkbox" id="c1">
+                Reading
+              </label>
       
-              <li><input type="checkbox" id="c2"><label for="c2">Malaysia</label></li>
-
-              <li><input type="checkbox" id="c3"><label for="c3">Hongkong</label></li>
+              <label for="c2">
+                <input type="checkbox" id="c2">
+                Sports
+              </label>
+  
+              <label for="c3">
+                <input type="checkbox" id="c3">
+                Music
+              </label>
+  
+              <label for="c4">
+                <input type="checkbox" id="c4">
+                Travel
+              </label>
+            </div>
+    
+          </div>
           
-
+  
+          <div class="country_div">
+            <label for="countries">Select Country</label>
+            <div class="country_inner">
+              <select name="countries">
+                <optgroup label="Asia">
+                    <option value="A1">Philippine</option>
+                    <option value="A2">China</option>
+                    <option value="A3">India</option>
+                    <option value="A4">Japan</option>
+                    <option value="A5">South Korea</option>
+                </optgroup>
+                <optgroup label="Europe">
+                    <option value="E1">Germany</option>
+                    <option value="E2">France</option>
+                    <option value="E3">United Kingdom</option>
+                    <option value="E4">Italy</option>
+                </optgroup>
+                <optgroup label="North America">
+                    <option value="NA1">United States</option>
+                    <option value="NA2">Canada</option>
+                    <option value="NA3">Mexico</option>
+                </optgroup>
+                <optgroup label="South America">
+                    <option value="SA1">Brazil</option>
+                    <option value="SA2">Argentina</option>
+                    <option value="SA3">Colombia</option>
+                </optgroup>
+                <optgroup label="Africa">
+                    <option value="AF1">South Africa</option>
+                    <option value="AF2">Nigeria</option>
+                    <option value="AF3">Egypt</option>
+                </optgroup>
+                <optgroup label="Oceania">
+                    <option value="O1">Australia</option>
+                    <option value="O2">New Zealand</option>
+                    <option value="03">Fiji</option>
+                </optgroup>
+            </select>
+            </div>
           </div>
   
-        </div>
-
-        <div class="profile__div">
-          <div class="profile_title">
-            <label for="interest">PROFILE:</label>
-            <input type="file" name="file" required>
-
+          <div class="profile_div">
+            <label for="interest">Upload Profile</label>
+            <div class="profile_title">
+              <input type="file" name="file" required>
+            </div>
+  
           </div>
-
+          
           <div class="comment_div">
-            <h2>COMMENT HERE!!</h2>
-            <textarea id="comment" placeholder="Add your comment here..."></textarea><br>
-            
-        </div>
-
-        <div>
-          <button onclick="submitComment()">SUBMIT</button>
-        </div>
-
+            <label for="comment">Comment</label>
+              <textarea id="comment" name="comment" placeholder="Add your comment here..." rows="3" cols="45"></textarea>
+          </div>
+  
+          <div class="submit_div">
+            <input type="submit" value="Submit">
+          </div>
+  
+        </form>
         
-
-      </form>
-      
+      </div>
     </div>
   </main>
   
