@@ -289,38 +289,38 @@
           <div class="name_div">
             <div class="name lastName">
               <label for="fullName">Last Name</label>
-              <input type="text" name="lastName" required>
+              <input type="text" name="lastName" required maxlength="20">
             </div>
     
             <div class="name firstName">
               <label for="name firstName">First Name</label>
-              <input type="text" name="firstName" required>
+              <input type="text" name="firstName" required maxlength="20">
             </div>
     
             <div class="name middleName">
               <label for="name middleName">Middle Name</label>
-              <input type="text" name="middleName" required>
+              <input type="text" name="middleName" required maxlength="20">
             </div>
           </div>
           <hr>
     
           <div class="email_div">
             <label for="email">Email</label>
-            <input type="email" name="email" required>
+            <input type="email" name="email" required maxlength="30">
           </div>
     
           <div class="password_div">
             <label for="password">Password</label>
-            <input type="password" name="password" required>
+            <input type="password" name="password" required maxlength="20" minlength="8">
           </div>
   
           <hr>
     
           <div class="gender__div">
-            <label for="gender" class="Gender">Gender</label>
+            <label for="gender" class="Gender" required>Gender</label>
             <div class="gender_inner">
               <label for="g1">
-                <input type="radio" id="g1" name="gender">
+                <input type="radio" id="g1" name="gender" required>
                   Male
               </label>
   
@@ -349,7 +349,6 @@
             <details>
               <summary>INTEREST</summary>
                 <div class="interest_title">
-                  <label for="interest"></label>
                 </div>
                 <div class="interest_inner">
                       <div class="interest_1">
@@ -404,7 +403,7 @@
           <div class="country_div">
             <label for="countries">Select Country</label>
             <div class="country_inner">
-              <select name="countries">
+              <select name="countries" required>
                 <optgroup label="Asia">
                     <option value="A1">Philippine</option>
                     <option value="A2">China</option>
@@ -452,7 +451,7 @@
           
           <div class="comment_div">
             <label for="comment">Comment</label>
-              <textarea id="comment" name="comment" placeholder="Add your comment here..." rows="3" cols="45"></textarea>
+              <textarea id="comment" name="comment" placeholder="Add your comment here..." rows="3" cols="45" required></textarea>
           </div>
   
           <div class="submit_div">
