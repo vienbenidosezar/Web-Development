@@ -5,73 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SwiftCart</title>
   <link rel="website icon" type="svg" href="thumbnail1.svg">
-  
-
 
   <style>
+    body{
+      margin: 0;
+      height: 2000px;
+    }
+
     p, button {
       margin: 0;
       font-family: New Century Schoolbook, TeX Gyre Schola, serif;
-
     }
+    
     p:hover{
       cursor: default;
     }
 
     header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 20px;
-      background-color: azure;
 
-      border: 1px solid;
+      padding: 0 140px;
+      padding-bottom: 3px;
+
+      background-color: rgb(242, 191, 164);
+      box-shadow: 0 0 10px rgb(242, 191, 164);
     }
+
     .left_div img{
       width: 80px;
       height: 80px;
-      border: 1px solid;
       display: block;
-      border-radius: 40px;
-      
     }
-    .right_div button{
+
+    .left_div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left_div .left_title_div .title{
+      font-size: 40px;
+    }
+
+    .left_div .left_title_div .slogan{
+      margin-top: -5px;
+      font-size: 13px;
+      text-align: right;
+    }
+
+    .right_div .login_bt, .sign_bt{
       padding: 10px 15px;
       border: 1px solid;
       display: block;
-      border-radius:5px;
-      box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.40);
-      
+      border-radius: 10px;
+      border: 1px solid white;
+
+      background-color: rgb(242, 191, 164);
+      transition: background-color 0.2s;
     }
-    .right_div button:hover{
-    
+    .right_div .track_bt, .feedback_bt, .customer_bt{
+      padding: 10px 15px;
+      display: block;
+      border-radius: 10px;
+
+      background-color: #F2BFA4;
+      border: none;
+
+      transition: color 0.2s;
+    }
+
+    .right_div .login_bt:hover, .sign_bt:hover{
      background-color: #F5E7DE;
+     cursor: pointer;
       
     }
-    .right_div button:active{
-      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
- 
-   }
+
+    .right_div .track_bt:hover, .feedback_bt:hover, .customer_bt:hover{
+      cursor: pointer;
+
+      color: #ff8645;
+    }
 
     .right_div{
       display: flex;
       gap: 10px;
-     
     }
 
-    .center_div p{
-      text-align: center;
-    }
-
-    .center_div .title {
-      letter-spacing: 5px;
-      font-size: 50px;
-    }
-
-    .center_div .slogan {
-      font-weight: 400;
-      letter-spacing: 5px;
-      font-size: 20px;
+    .page1{
+      margin-top: 120px;
     }
 
     nav{
@@ -84,41 +113,44 @@
     
     nav button {
       padding: 10px 20px;
-      box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.40);
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.50);
       font-size: 14px;
-      background-color: #F2BFA4;
+      border: none;
+      background-color: rgb(242, 191, 164);
 
-
+      transition: background-color 0.2s;
     }
 
-   nav button:hover{
-    background-color: #F5E7DE;
-     
-   }
-   nav button:active{
-     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-  
-    
-  }
+    nav button:hover{
+      background-color: #F5E7DE;
+      cursor: pointer;
+
+      box-shadow: 0px 0px 10px rgba(242, 191, 164, 1);
+    }
+
+    nav button:active{
+      color: rgb(255, 146, 87);
+      transition: color 0.1s;
+    }
 
     nav {
       display: flex;
       
     }
 
-    main {
+    section {
       display: flex;
       flex-direction: column;
 
       margin-top: 30px;
     }
 
-    main .sale_div {
+    section .sale_div {
       display: flex;
       justify-content: center;
     }
 
-    main .sale_div img{
+    section .sale_div img{
       width: 1400px;
       height: 300px;
       object-fit: cover;
@@ -127,7 +159,7 @@
       
     }
 
-    main .product_div {
+    section .product_div {
       position: relative;
       display: flex;
       justify-content: space-evenly;
@@ -137,7 +169,7 @@
     }
 
 
-    main .product_div img {
+    section .product_div img {
       width: 300px;
       height: 300px;
       border-radius: 10px;
@@ -145,13 +177,13 @@
       object-fit: cover;
     }
 
-    main .product_div img:hover {
+    section .product_div img:hover {
       height: 300px;
      
 
     }
 
-    main .product_div p, a {
+    section .product_div p, a {
       text-align: center;
       color: black;
       text-decoration: none;
@@ -159,7 +191,7 @@
       margin-bottom: 5px;
     }
 
-    main .product_div 
+    section .product_div 
     .cars_div,
     .cellphones_div, 
     .shoes_div {
@@ -170,94 +202,94 @@
 
     }
 
-    main .product_div 
+    section .product_div 
     .cars_div:hover,
     .cellphones_div:hover, 
     .shoes_div:hover {
       background-color: #F2BFA4;
 
     }
-
-
-
-
-
   </style>
 </head>
 <body style="background-color: #F5E7DE;">
-  <header style="background-color: #F2BFA4;">
-    <div class="left_div">
-      <img src="thumbnail1.svg" alt="">
-    </div>
 
-    <div class="center_div">
-      <p class="title">SwiftCart</p>
-      <p class="slogan">Your Perfect Fit Awaits</p>
-    </div>
+  <main class="page1">
 
-    <div class="right_div">
-      
-      <button class="login_bt">
-        Login
-      </button>
-    
-    
-      <button class="sign_bt">
-        Sign up
-      </button>
-    
-    </div>
-  </header>
+    <header>
+      <div class="left_div">
+        <img src="thumbnail1.svg" alt="">
 
-  <nav>
-    <a href="index.html">
-       <button class="home_bt">
-        HOME
-      </button>
-    </a>
-   
-    <a href="product_cars.html">
-      <button class="product_bt">
-        PRODUCT
-      </button>
-    </a>
-    
-    <a href="about_us.html">
-      <button class="about_bt">
-        ABOUT US
-      </button>
-    </a>
+        <div class="left_title_div">
+          <p class="title">SwiftCart</p>
+          <p class="slogan">Your Perfect Fit Awaits</p>
+        </div>
+      </div>
+  
+      <div class="center_div">
+      </div>
+  
+      <div class="right_div">
+        <button class="feedback_bt">Feedback</button>
+        <button class="customer_bt"> Customer Care</button>
+        <button class="track_bt">Track My Order</button>
 
-  </nav>
-
-  <main>
-    <div class="sale_div">
-      <img src="thumbnail5.jpg" alt="">
-    </div>
-
-    <div class="product_div">
+        <button class="login_bt">Login</button>
+        <button class="sign_bt">Sign up</button>
+      </div>
+    </header>
+  
+    <nav>
+      <a href="index.html">
+         <button class="home_bt">
+          HOME
+        </button>
+      </a>
+     
       <a href="product_cars.html">
-        <div class="cars_div">
-          <p>Cars</p>
-          <img src="thumbnail2.png" alt="">
-        </div>
+        <button class="product_bt">
+          PRODUCT
+        </button>
       </a>
       
-      <a href="product_cellphones.html">
-        <div class="cellphones_div">
-          <p>Smartphones</p>
-          <img src="thumbnail3.png" alt="">
-        </div>
+      <a href="about_us.html">
+        <button class="about_bt">
+          ABOUT US
+        </button>
       </a>
+  
+    </nav>
+  
+    <section>
+      <div class="sale_div">
+        <img src="thumbnail5.jpg" alt="">
+      </div>
+  
+      <div class="product_div">
+        <a href="product_cars.html">
+          <div class="cars_div">
+            <p>Cars</p>
+            <img src="thumbnail2.png" alt="">
+          </div>
+        </a>
+        
+        <a href="product_cellphones.html">
+          <div class="cellphones_div">
+            <p>Smartphones</p>
+            <img src="thumbnail3.png" alt="">
+          </div>
+        </a>
+  
+        <a href="product_shoes.html">
+          <div class="shoes_div">
+            <p>Shoes</p>
+            <img src="thumbnail4.png" alt="">
+          </div>
+        </a>
+        
+      </div>
+    </section>
+    
 
-      <a href="product_shoes.html">
-        <div class="shoes_div">
-          <p>Shoes</p>
-          <img src="thumbnail4.png" alt="">
-        </div>
-      </a>
-      
-    </div>
   </main>
   
 
