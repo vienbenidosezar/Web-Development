@@ -118,7 +118,6 @@
       width: 250px;
       padding: 3px;
       color: rgb(7, 156, 156);
-      font-weight: 900;
       border-radius: 5px;
       background-color: rgb(241, 247, 245);
     }
@@ -172,11 +171,20 @@
 
     .interest_inner{
       display: flex;
-      flex-direction: column;
-      width: 90px;
+      width: 300px;
       margin-left: 10px;
       margin-top: 5px;
       margin-bottom: 5px;
+    }
+
+    .interest_inner .interest_1, .interest_2{
+      display: flex;
+      flex-direction: column;
+      margin-left: 5px;
+    }
+
+    .interest_2{
+      margin-left: 20px;
     }
 
     .country_div{
@@ -340,29 +348,49 @@
                   <label for="interest"></label>
                 </div>
                 <div class="interest_inner">
+                      <div class="interest_1">
+                        <label for="c1">
+                          <input type="checkbox" id="c1">
+                          Reading
+                        </label>
+                
+                        <label for="c2">
+                          <input type="checkbox" id="c2">
+                          Sports
+                        </label>
+            
+                        <label for="c3">
+                          <input type="checkbox" id="c3">
+                          Music
+                        </label>
+            
+                        <label for="c4">
+                          <input type="checkbox" id="c4">
+                          Travel
+                        </label>
+                      </div>
 
-                  
-                      <label for="c1">
-                        <input type="checkbox" id="c1">
-                        Reading
-                      </label>
-              
-                      <label for="c2">
-                        <input type="checkbox" id="c2">
-                        Sports
-                      </label>
-          
-                      <label for="c3">
-                        <input type="checkbox" id="c3">
-                        Music
-                      </label>
-          
-                      <label for="c4">
-                        <input type="checkbox" id="c4">
-                        Travel
-                      </label>
-
-                  
+                      <div class="interest_2">
+                        <label for="c5">
+                          <input type="checkbox" id="c5">
+                        Photography
+                        </label>
+  
+                        <label for="c6">
+                          <input type="checkbox" id="c6">
+                          Blogging
+                        </label>
+  
+                        <label for="c7">
+                          <input type="checkbox" id="c7">
+                          Art
+                        </label>
+  
+                        <label for="c8">
+                          <input type="checkbox" id="c8">
+                          Dance
+                        </label>
+                      </div>
                 </div>
           </details>
     
