@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>REGISTRATION FORM</title>
   <link href="index.css">
   <style>
     body{
@@ -45,8 +45,10 @@
       justify-content: center;
       height: 100%;
       border-radius: 15px;
+      
 
-      background-color: white;
+
+      background-color: rgb(228, 224, 224);
     }
 
     hr{
@@ -63,10 +65,13 @@
       display: flex;
       flex-direction: column;
       width: 350px;
+      
     }
+   
 
     .name_div .name{
       margin: 10px 5px;
+      border-radius: 5px;
     }
 
     .name_div .name input{
@@ -74,7 +79,13 @@
       margin-left: 15px;
       width: 300px;
       padding: 3px;
+      color: rgb(7, 156, 156);
+      font-weight: 900;
+      border-radius: 5px;
+      background-color: rgb(241, 247, 245);
     }
+    
+    
 
     .email_div{
       display: flex;
@@ -88,6 +99,10 @@
       margin-left: 15px;
       width: 250px;
       padding: 3px;
+      color: rgb(7, 156, 156);
+      font-weight: 900;
+      border-radius: 5px;
+      background-color: rgb(241, 247, 245);
     }
 
     .password_div{
@@ -102,6 +117,10 @@
       margin-left: 15px;
       width: 250px;
       padding: 3px;
+      color: rgb(7, 156, 156);
+      font-weight: 900;
+      border-radius: 5px;
+      background-color: rgb(241, 247, 245);
     }
 
     .gender_div{
@@ -109,7 +128,9 @@
       flex-direction: column;
       width: 350px;
       margin: 15px 5px;
+      
     }
+    
 
     .gender_inner{
       display: flex;
@@ -119,6 +140,7 @@
       margin-left: 15px;
       margin-top: 5px;
       margin-bottom: 5px;
+      
     }
 
     .birthdate_div{
@@ -132,6 +154,11 @@
       width: 150px;
       margin-top: 5px;
       margin-bottom: 5px;
+      color: rgb(7, 156, 156);
+      font-weight: 900;
+      border-radius: 5px;
+      background-color: rgb(241, 247, 245);
+      
     }
 
     hr{
@@ -173,6 +200,8 @@
     .interest_inner input, 
     .profile_div input{
       cursor: pointer;
+      color: rgb(7, 156, 156);
+      font-weight: 900;
     }
 
     .profile_div {
@@ -191,11 +220,16 @@
 
     textarea{
       resize: none;
+      color: rgb(7, 156, 156);
+      font-weight: 900;
+      border-radius: 5px;
+      background-color: rgb(241, 247, 245);
     }
 
     .comment_div{
       display: flex;
       flex-direction: column;
+      
 
       margin: 10px 0;
     }
@@ -205,10 +239,28 @@
       align-items: center;
       justify-content: center;
       margin: 20px 0;
+      
     }
 
     .submit_div input{
-      padding: 10px 143px;
+      padding: 10px 100px;
+      background-color:rgb(37, 227, 227);
+      border-radius: 5px;
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.50);
+    }
+    .submit_div input:hover{
+      opacity: 0.8;
+      color: black;
+    }
+
+    .submit_div input:active{
+      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+      opacity: 1;
+      color: white;
+      
     }
 
   </style>
@@ -281,30 +333,38 @@
           <hr>
   
           <div class="interest__div">
-            <div class="interest_title">
-              <label for="interest">Interest</label>
-            </div>
-            <div class="interest_inner">
-              <label for="c1">
-                <input type="checkbox" id="c1">
-                Reading
-              </label>
-      
-              <label for="c2">
-                <input type="checkbox" id="c2">
-                Sports
-              </label>
-  
-              <label for="c3">
-                <input type="checkbox" id="c3">
-                Music
-              </label>
-  
-              <label for="c4">
-                <input type="checkbox" id="c4">
-                Travel
-              </label>
-            </div>
+
+            <details>
+              <summary>INTEREST</summary>
+                <div class="interest_title">
+                  <label for="interest"></label>
+                </div>
+                <div class="interest_inner">
+
+                  
+                      <label for="c1">
+                        <input type="checkbox" id="c1">
+                        Reading
+                      </label>
+              
+                      <label for="c2">
+                        <input type="checkbox" id="c2">
+                        Sports
+                      </label>
+          
+                      <label for="c3">
+                        <input type="checkbox" id="c3">
+                        Music
+                      </label>
+          
+                      <label for="c4">
+                        <input type="checkbox" id="c4">
+                        Travel
+                      </label>
+
+                  
+                </div>
+          </details>
     
           </div>
           
