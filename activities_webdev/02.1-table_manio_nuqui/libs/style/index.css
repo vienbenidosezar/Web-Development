@@ -1,0 +1,317 @@
+body{
+  margin: 0;
+  height: 2000px;
+  background-color: #F5E7DE;
+}
+
+p, button {
+  margin: 0;
+  font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+}
+
+p:hover{
+  cursor: default;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 140px;
+  padding-bottom: 3px;
+
+  background-color: rgb(242, 191, 164);
+  box-shadow: 0 0 10px rgb(242, 191, 164);
+}
+
+.left_div img{
+  width: 80px;
+  height: 80px;
+  display: block;
+}
+
+.left_div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left_div .left_title_div .title{
+  font-size: 40px;
+}
+
+.left_div .left_title_div .slogan{
+  margin-top: -5px;
+  font-size: 13px;
+  text-align: right;
+}
+
+.right_div .login_bt, .sign_bt{
+  padding: 10px 15px;
+  border: 1px solid;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid white;
+
+  background-color: rgb(242, 191, 164);
+  transition: background-color 0.2s;
+}
+.right_div .track_bt, .feedback_bt, .customer_bt{
+  padding: 10px 15px;
+  display: block;
+  border-radius: 10px;
+
+  background-color: #F2BFA4;
+  border: none;
+
+  transition: color 0.2s;
+}
+
+.right_div .login_bt:hover, .sign_bt:hover{
+ background-color: #F5E7DE;
+ cursor: pointer;
+  
+}
+
+.right_div .track_bt:hover, .feedback_bt:hover, .customer_bt:hover{
+  cursor: pointer;
+
+  color: #ff8645;
+}
+
+.right_div{
+  display: flex;
+  gap: 10px;
+}
+
+main{
+  margin-top: 120px;
+}
+
+nav{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+
+
+}
+
+nav button {
+  padding: 10px 20px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.50);
+  font-size: 14px;
+  border: none;
+  background-color: rgb(242, 191, 164);
+
+  transition: background-color 0.2s;
+}
+
+nav button:hover{
+  background-color: #F5E7DE;
+  cursor: pointer;
+
+  box-shadow: 0px 0px 10px rgba(242, 191, 164, 1);
+}
+
+nav button:active{
+  color: rgb(255, 146, 87);
+  transition: color 0.1s;
+}
+
+nav {
+  display: flex;
+  
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 30px;
+}
+
+section .sale_div {
+  display: flex;
+  justify-content: center;
+}
+
+section .sale_div img{
+  width: 1400px;
+  height: 300px;
+  object-fit: cover;
+  display: flex;
+  border-radius: 10px;
+  
+}
+
+
+section .product_div {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: none;
+
+  margin-top: 50px;
+}
+
+
+section .product_div img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+
+  object-fit: cover;
+}
+
+section .product_div img:hover {
+  height: 300px;
+ 
+
+}
+
+section .product_div p, a {
+  text-align: center;
+  color: black;
+  text-decoration: none;
+
+  margin-bottom: 5px;
+}
+
+section .product_div 
+.cars_div,
+.cellphones_div, 
+.shoes_div {
+  border-radius: 10px;
+  padding: 5px;
+  transition: background-color 0.5s;
+
+
+}
+
+section .product_div 
+.cars_div:hover,
+.cellphones_div:hover, 
+.shoes_div:hover {
+  background-color: #F2BFA4;
+
+}
+.lower{
+  height: 500px;
+  width: 1000px;
+  position: relative;
+}
+
+#sec1{
+  margin-bottom: 120px;
+
+}
+
+.review_div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 100px 0px;
+  margin: 0 30px;
+
+  transition: background-color 0.5s, border-radius 0.5s, box-shadow 0.5s;
+}
+
+.review_div:hover{
+  background-color: #ffe3d2;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.50);
+  border-radius: 50px;
+
+}
+
+
+.review_div img{
+  width: 400px;
+
+  border-radius: 20px;
+  
+}
+
+.review_div .review{
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+
+}
+.section2 {
+  position: relative;
+  margin-top: 120px;
+}
+.heading{
+  position: absolute;
+  left: 100px;
+  text-align: center;
+
+  font-size: 20px;
+  color: #cf662d;
+
+  font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+}
+
+footer{
+  margin-top: 100px;
+  position: relative;
+}
+
+.contact_div {
+  position: relative;
+  display: flex;
+
+  padding: 130px 0;
+
+  justify-content: space-evenly;
+}
+.contact_us{
+  position: absolute;
+  left: 100px;
+  top: 0;
+
+  color: #F5E7DE;
+
+}
+.contact_div img{
+  width: 30px;
+}
+
+.con {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  background-color: #F5E7DE;
+  padding: 10px 25px;
+  width: 200px;
+  border-radius: 10px;
+}
+.con img{
+  margin-bottom: 10px;
+}
+
+.background_footer {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: -1;
+}
+

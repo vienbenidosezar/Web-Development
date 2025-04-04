@@ -1,0 +1,155 @@
+p {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 25px;
+}
+
+button {
+  font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+
+  font-size: 17px;
+}
+
+nav {
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+position: absolute;
+left: 50px;
+bottom: 0;
+top: 0;
+
+
+width: 100px;
+}
+
+nav .bottom_div {
+display: flex;
+justify-content: center;
+position: absolute;
+bottom: 10px;
+left: 0;
+right: 0;
+
+}
+
+nav .bottom_div button {
+  padding: 7px 20px;
+  transition: background-color 0.2s;
+  position: relative;
+  background-color: #F2BFA4;
+  margin-bottom: 50px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.50);
+  border: none;
+
+}
+nav button:hover{
+  background-color: #F5E7DE;
+  cursor: pointer;
+
+  box-shadow: 0px 0px 10px rgba(242, 191, 164, 1);
+
+}
+
+main {
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+
+
+position: absolute;
+right: 250px;
+bottom: 0;
+top: 0;
+
+width: 1500px;
+
+
+}
+
+main .about_div {
+height: 200px;
+width: 600px;
+text-align: center;
+
+
+}
+
+main .logo_div img{
+position: relative;
+width: 300px;
+
+
+z-index: 2;
+}
+
+main .design_logo_div {
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+
+width: 700px;
+height: 700px;
+
+}
+
+
+main .design_logo_div .product_1 img {
+width: 300px;
+z-index: 1;
+position: absolute;
+
+right: 20px;
+bottom: 150px;
+
+transition: width 1s, right 1s, bottom 1s;
+
+}
+
+main .design_logo_div .product_1 img:hover {
+width: 350px;
+position: absolute;
+z-index: 1;
+
+right: 25px;
+bottom: 155px;
+}
+
+main .design_logo_div .product_2 img {
+width: 250px;
+position: absolute;
+
+left: 100px;
+top: 30px;
+
+transition: width 1s, left 1s, bottom 1s;
+}
+
+main .design_logo_div .product_2 img:hover {
+width: 290px;
+position: absolute;
+
+left: 80px;
+top: 30px;
+
+}
+
+main .design_logo_div .product_3 img {
+width: 250px;
+position: absolute;
+
+left: 20px;
+bottom: 30px;
+
+transition: width 1s, left 1s, bottom 1s;
+}
+
+main .design_logo_div .product_3 img:hover {
+width: 290px;
+position: absolute;
+
+left: 20px;
+bottom: 30px;
+}

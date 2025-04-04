@@ -5,225 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SwiftCart</title>
   <link rel="website icon" type="svg" href="thumbnail1.svg">
+  <link rel="stylesheet" href="libs/style/index.css">
 
-  <style>
-    body{
-      margin: 0;
-      height: 2000px;
-    }
-
-    p, button {
-      margin: 0;
-      font-family: New Century Schoolbook, TeX Gyre Schola, serif;
-    }
-    
-    p:hover{
-      cursor: default;
-    }
-
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      padding: 0 140px;
-      padding-bottom: 3px;
-
-      background-color: rgb(242, 191, 164);
-      box-shadow: 0 0 10px rgb(242, 191, 164);
-    }
-
-    .left_div img{
-      width: 80px;
-      height: 80px;
-      display: block;
-    }
-
-    .left_div{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .left_div .left_title_div .title{
-      font-size: 40px;
-    }
-
-    .left_div .left_title_div .slogan{
-      margin-top: -5px;
-      font-size: 13px;
-      text-align: right;
-    }
-
-    .right_div .login_bt, .sign_bt{
-      padding: 10px 15px;
-      border: 1px solid;
-      display: block;
-      border-radius: 10px;
-      border: 1px solid white;
-
-      background-color: rgb(242, 191, 164);
-      transition: background-color 0.2s;
-    }
-    .right_div .track_bt, .feedback_bt, .customer_bt{
-      padding: 10px 15px;
-      display: block;
-      border-radius: 10px;
-
-      background-color: #F2BFA4;
-      border: none;
-
-      transition: color 0.2s;
-    }
-
-    .right_div .login_bt:hover, .sign_bt:hover{
-     background-color: #F5E7DE;
-     cursor: pointer;
-      
-    }
-
-    .right_div .track_bt:hover, .feedback_bt:hover, .customer_bt:hover{
-      cursor: pointer;
-
-      color: #ff8645;
-    }
-
-    .right_div{
-      display: flex;
-      gap: 10px;
-    }
-
-    .page1{
-      margin-top: 120px;
-    }
-
-    nav{
-      display: flex;
-      justify-content: space-evenly;
-      margin-top: 50px;
-    
-
-    }
-    
-    nav button {
-      padding: 10px 20px;
-      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.50);
-      font-size: 14px;
-      border: none;
-      background-color: rgb(242, 191, 164);
-
-      transition: background-color 0.2s;
-    }
-
-    nav button:hover{
-      background-color: #F5E7DE;
-      cursor: pointer;
-
-      box-shadow: 0px 0px 10px rgba(242, 191, 164, 1);
-    }
-
-    nav button:active{
-      color: rgb(255, 146, 87);
-      transition: color 0.1s;
-    }
-
-    nav {
-      display: flex;
-      
-    }
-
-    section {
-      display: flex;
-      flex-direction: column;
-
-      margin-top: 30px;
-    }
-
-    section .sale_div {
-      display: flex;
-      justify-content: center;
-    }
-
-    section .sale_div img{
-      width: 1400px;
-      height: 300px;
-      object-fit: cover;
-      display: flex;
-      border-radius: 10px;
-      
-    }
-   
-
-    section .product_div {
-      position: relative;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: none;
-
-      margin-top: 50px;
-    }
-
-
-    section .product_div img {
-      width: 300px;
-      height: 300px;
-      border-radius: 10px;
-
-      object-fit: cover;
-    }
-
-    section .product_div img:hover {
-      height: 300px;
-     
-
-    }
-
-    section .product_div p, a {
-      text-align: center;
-      color: black;
-      text-decoration: none;
-
-      margin-bottom: 5px;
-    }
-
-    section .product_div 
-    .cars_div,
-    .cellphones_div, 
-    .shoes_div {
-      border-radius: 10px;
-      padding: 5px;
-      transition: background-color 0.5s;
-
-
-    }
-
-    section .product_div 
-    .cars_div:hover,
-    .cellphones_div:hover, 
-    .shoes_div:hover {
-      background-color: #F2BFA4;
-
-    }
-    .lower{
-      height: 500px;
-      width: 1000px;
-      position: relative;
-    }
-  </style>
 </head>
-<body style="background-color: #F5E7DE;">
 
-  <main class="page1">
+<body>
 
+  <main>
     <header>
       <div class="left_div">
-        <img src="thumbnail1.svg" alt="">
+        <img src="libs/thumbnails/thumbnail1.svg" alt="">
 
         <div class="left_title_div">
           <p class="title">SwiftCart</p>
@@ -235,9 +26,13 @@
       </div>
   
       <div class="right_div">
-        <button class="feedback_bt">Feedback</button>
-        <button class="customer_bt"> Customer Care</button>
-        <button class="track_bt">Track My Order</button>
+        <a href="#sec2">
+          <button class="feedback_bt" >Feedback</button>
+        </a>
+
+        <a href="#footer">
+          <button class="customer_bt"> Customer Care</button>
+        </a>
 
         <button class="login_bt">Login</button>
         <button class="sign_bt">Sign up</button>
@@ -265,56 +60,85 @@
   
     </nav>
   
-    <section>
+    <section id="sec1">
       <div class="sale_div">
-        <img src="thumbnail5.jpg" alt="">
+        <img src="libs/thumbnails/thumbnail5.jpg" alt="">
       </div>
   
       <div class="product_div">
         <a href="product_cars.html">
           <div class="cars_div">
             <p>Cars</p>
-            <img src="thumbnail2.png" alt="">
+            <img src="libs/thumbnails/thumbnail2.png" alt="">
           </div>
         </a>
         
         <a href="product_cellphones.html">
           <div class="cellphones_div">
             <p>Smartphones</p>
-            <img src="thumbnail3.png" alt="">
+            <img src="libs/thumbnails/thumbnail3.png" alt="">
           </div>
         </a>
   
         <a href="product_shoes.html">
           <div class="shoes_div">
             <p>Shoes</p>
-            <img src="thumbnail4.png" alt="">
+            <img src="libs/thumbnails/thumbnail4.png" alt="">
           </div>
         </a>
         
       </div>
+    </section>
 
-      
-    
+    <section id="sec2" class="section2">
+      <div class="heading">
+        <h1>
+          Customer Care
+        </h1>
+      </div>
+
+      <div class="review_div">
+        <div class="review">
+          <img  src="libs/thumbnails/rev1.png" alt="">
+
+          <img  src="libs/thumbnails/rev2.png" alt="">
+
+          <img  src="libs/thumbnails/rev3.png" alt="">
+        </div>
+      </div>
 
     </section>
-      <hr>
-      <div class="lower">
-        <img src="percent" alt="">
 
+    <footer id="footer">
+      <img class=" background_footer" src="libs/thumbnails/thumbnail10.png" alt="">
+      <div class="contact_div">
+        <div class="contact_us">
+          <h1>Contact Us</h1>
+        </div>
 
+        <div class="con email">
+          <img src="libs/icons/mail.png" alt="">
+          <p>SwiftCart@gmail.com</p>
+        </div>
 
+        <div class="con facebook">
+          <img src="libs/icons/communication.png" alt="">
+          <p>SwiftCart</p>
+        </div>
 
+        <div class="con call">
+          <img src="libs/icons/phone-call.png" alt="">
+          <p>092834942121</p>
+        </div>
+
+        <div class="con address">
+          <img src="libs/icons/circle.png" alt="">
+          <p>Bacolor, Pampanga</p>
+        </div>
       </div>
-    
+    </footer>
 
   </main>
-  
-
-
-  
-
-
   
   
 </body>
